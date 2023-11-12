@@ -1,0 +1,306 @@
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+ 
+    
+
+}
+.app{
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+    min-height: 100vh;
+    
+  
+}
+.app_body{
+    // border-color:#eee;
+    // border-width: 1px;
+    // border-style: solid;
+    width: 75%;
+    border-radius: 10px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    .main-app{
+   
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0 10px;
+        .title{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-between ;
+                    padding: 20px 20px;
+         
+       
+       
+            label{
+                font-family:   lato;
+                font-weight: 700;
+                font-size: 25px;
+                color: #333;
+
+            }
+            .right{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 50%;
+                .search{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border-width: 0.5px;
+                    border-style: solid;
+                    border-color: #333;
+                    border-radius: 30px;
+                    padding: 10px 18px;
+                    width: 100%;
+                    input{
+                        border:none;
+                        margin-left: 10px;
+                        width: 100%;
+                        &::placeholder{
+                            font-family: poppins;
+                            font-weight: 300;
+                            font-size: 14px;
+                            color: #333;
+                        }
+                    }
+                }
+                .circle{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    height: 45px;
+                    width: 55px;
+                    border-radius: 100%;
+                    border-width: 0.5px;
+                    border-style: solid;
+                    border-color: #333;
+                    margin-left: 10px;
+                    
+                }
+                .oval{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                  padding: 10px 20px;
+                    border-radius: 30px;
+                    border-width: 0.5px;
+                    border-style: solid;
+                    border-color: #333;
+                    margin-left: 10px;
+                    label{
+                        font-family: poppins;
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #333;
+                    }
+                    font-family: poppins;
+                    
+                }
+            }
+        
+        }   
+        .app-content{
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .chat-input-box{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 20px;
+                background-color: white;
+                box-shadow: 0px 0px 30px #ccc;
+                border-radius: 30px;
+                .chat-input{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between
+                    ;
+                    width: 100%;
+                    input{
+                        border: none;
+                        width: 100%;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                        font-family: poppins;
+                        font-weight: 300;
+                        font-size: 14px;
+                        &::placeholder{
+                            font-family: poppins;
+                            font-weight: 300;
+                            font-size: 14px;
+                            color: #bbb;
+                        }
+                    }
+                    .send{
+                        button{
+                            background-color: #333;
+                            border-radius: 30px;
+                            border: none;
+                            padding: 10px 20px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+                            margin-left: 10px;
+                            color: white;
+                                
+                        }
+                    }
+                
+                }
+            }
+        }    
+
+    }
+}   
+
+input{
+    outline: none;
+}
+
+.chat-body{
+    display: flex;
+    flex-direction: column;
+    max-height: 75vh;
+    width: 100%;
+    overflow-y: scroll;
+    .chat-item{
+        display: flex;
+        flex-direction: column;
+     
+        width: 100%;
+         margin-bottom: 10px;
+        &.left{
+            float: left;
+           align-items: flex-start;
+           .bubble{
+            border-radius: 10px 10px 10px 0px;
+            background-color: #bbb;
+            label{
+                color: #fff;
+            }
+            &.ai{
+                background-color: #f2f5ff;
+                font-family: poppins;
+                color: #718cf6;
+                label{
+                    font-family: poppins;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #718cf6;
+                }
+            }
+           }
+            
+        }
+        &.right{
+            float: right;
+            align-items: flex-end;
+            .bubble{
+                border-radius: 10px 10px 0px 10px;
+                background-color: #333;
+          
+                label{
+                    color: #fff;
+                }
+                
+               }
+                
+        }
+    }
+    label.nametag{
+        font-family: poppins;
+        font-weight: 500;
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 5px;
+    }
+    label.date{
+        font-family: poppins;
+        font-weight: 300;
+        font-size: 10px;
+        color: #aaa;
+   
+    }
+    .bubble{
+        
+     
+        padding: 10px 20px;
+        max-width: 50%;
+        label{
+            font-family: poppins;
+            font-weight: 400;
+            font-size: 14px;
+        
+        }
+        
+    }
+}
+ 
+  
+ 
+  .chat-body::-webkit-scrollbar {
+    width: 8px; 
+    display: none;
+  }
+  
+  .chat-body::-webkit-scrollbar-thumb {
+    background-color: #888;  
+    border-radius: 4px;  
+    display: none;
+  }
+  
+  .chat-body::-webkit-scrollbar-thumb:hover {
+    background-color: #555;  
+    display: none;
+  }
+  .popup-modal {
+    position: absolute;
+    top: 75%;
+    left: 20px;
+    width: 80%;
+    background-color: #f2f5ff;
+    font-family: poppins;
+    color: #718cf6;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 3px 20px;
+    font-size: 14px;
+    height: max-content;
+    
+    -webkit-box-shadow: 0 0px 24px#ddd;
+    -moz-box-shadow: 0 0px 24px#ddd;
+    box-shadow: 0 0px 24px#ddd;
+  }
+  .popup-div{
+    input[value*="@ai"] {
+        color: #718cf6;
+        font-weight: bold;
+        width: 100%;
+
+      }
+  }
+
+  .input{
+    width: 100%;
+  }

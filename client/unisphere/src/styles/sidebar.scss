@@ -1,0 +1,184 @@
+.sidebar{
+    
+    width: 25%;
+    background-color: white;
+    .top_i{
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        background: #ffffff70;
+        backdrop-filter: blur(6px);
+        padding-bottom: 20px;
+    
+    }
+    .search{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-width: 0.5px;
+        border-style: solid;
+        border-color: #bbb;
+        border-radius: 30px;
+        padding: 8px 16px;
+        width: 100%;
+        input{
+            border:none;
+            margin-left: 10px;
+            width: 100%;
+            &::placeholder{
+                font-family: poppins;
+                font-weight: 300;
+                font-size: 14px;
+                color: #bbb;
+            }
+        }
+    }
+    .lil{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-width: 0px 0px 1px;
+        border-style: solid;
+        border-color: #eee;
+        margin-bottom: 10px;
+        .item{
+            padding: 10px 6px;
+        
+             margin-right: 10px;
+      
+            label{
+                font-family: poppins;
+                font-weight: 500;
+                font-size: 14px;
+                color: #ddd;
+            }
+           &.active{
+            border-width: 0px 0px 2px;
+            border-style: solid;
+            border-color: #333;
+                label{
+
+                    color: #333; 
+                }
+           }
+
+        }
+    }
+    // border-color:#eee;
+    // border-width: 1px;
+    // border-style: solid;
+    // border-radius: 10px;
+    .logo{
+        padding: 16px 10px;
+    }
+    .sidebar-main{
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        .sec{
+           
+            .top{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                label{
+                    font-family: poppins;
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: #bbb;
+                }
+                span.dash{
+                   background: #ccc;
+                     width: 100px;
+                     height: 0.5px;
+                     margin-left: 5px;
+                }
+            }
+            .items{
+                display: flex;
+                flex-direction: column;
+                .item-head{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: 10px  20px;
+                    margin-bottom: 10px;
+                    label{
+
+             
+                        font-family: poppins;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: #bbb;
+                  
+                    }
+                    .line{
+                        background: #ccc;
+                        width: 100%;
+                        height: 0.5px;
+                        margin-left: 10px;
+                    }
+                }
+                .item{
+                    padding: 10px 20px;
+                    width: 100%;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    border-width: 1px;
+                    border-color: transparent;
+                    border-style: solid;
+                    label{
+                        font-family: poppins;
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: #888;
+                    }
+                    transition: all 0.3s ease-in-out;
+                   &.active{
+                    background-color:  #f1f1f1;
+                    border-width: 1px;
+             
+                    border-color: #ddd;
+                   }
+                   &:hover{
+                    transition: all 0.3s ease-in-out;
+                    background-color: #f5f5f5;
+                   }
+
+                }
+
+            }
+        }
+
+    }
+}
+input{
+    background-color: transparent;
+}
+ 
+
+.skeleton-loading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+  }
+  
+  .skeleton-item {
+    width: 100%;
+    height: 30px; 
+    background: linear-gradient(90deg, #f5f5f5 25%, #e0e0e0 50%, #f5f5f5 75%);
+    background-size: 200% 100%;
+    animation: loading 3.5s infinite;
+    border-radius: 10px;
+  }
+  
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
